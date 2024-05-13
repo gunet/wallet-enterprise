@@ -1,0 +1,22 @@
+name: Build Docker image
+
+on:
+  push:
+    branches-ignore:
+      - dc4eu-rome
+  pull_request:
+
+jobs:
+  build-base:
+
+    # Permissions for GITHUB_TOKEN
+    permissions:
+      contents: read  # To check out repo
+      packages: read  # To read NPM registry
+
+    uses: gunet/wallet-ecosystem/.github/workflows/docker-build-push.yml@dc-workflow
+    with:
+      image-tag: ghcr.io/gunet/wallet-enterprise:base
+      docker-push: true
+      dockerfile-path: ./base.Dockerfile
+
