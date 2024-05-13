@@ -16,6 +16,7 @@ jobs:
 
     uses: gunet/wallet-ecosystem/.github/workflows/docker-build-push.yml@dc-workflow
     with:
-      image-tag: ghcr.io/gunet/wallet-enterprise:latest
+      image-tag: ghcr.io/gunet/wallet-enterprise:base
       docker-push: false
-      dockerfile-path: ./Dockerfile
+      dockerfile-path: ./base.Dockerfile
+
