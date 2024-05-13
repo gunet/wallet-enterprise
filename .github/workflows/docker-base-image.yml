@@ -3,7 +3,7 @@ name: Build Docker image
 on:
   push:
     branches-ignore:
-      - dc-workflow  # Covered by docker-push.yml
+      - dc4eu-rome
   pull_request:
 
 jobs:

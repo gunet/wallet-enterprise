@@ -3,7 +3,7 @@ name: Build and push Docker image
 on:
   push:
     branches:
-      - dc-workflow
+      - dc4eu-rome
 
 jobs:
   build:
