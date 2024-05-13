@@ -7,12 +7,12 @@ on:
   pull_request:
 
 jobs:
-  build-base:
+  push-base:
 
     # Permissions for GITHUB_TOKEN
     permissions:
       contents: read  # To check out repo
-      packages: read  # To read NPM registry
+      packages: write  # To read NPM registry
 
     uses: gunet/wallet-ecosystem/.github/workflows/docker-build-push.yml@dc-workflow
     with:
