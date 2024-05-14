@@ -8,15 +8,14 @@ on:
 
 jobs:
   build-base:
-
     # Permissions for GITHUB_TOKEN
     permissions:
       contents: read  # To check out repo
       packages: read  # To read NPM registry
 
     uses: gunet/wallet-ecosystem/.github/workflows/docker-build-push.yml@dc-workflow
+    secrets: inherit
     with:
       image-tag: ghcr.io/gunet/wallet-enterprise:base
       docker-push: false
       dockerfile-path: ./base.Dockerfile
-

@@ -8,7 +8,6 @@ on:
 
 jobs:
   push-base:
-
     # Permissions for GITHUB_TOKEN
     permissions:
       contents: read  # To check out repo
@@ -20,5 +19,3 @@ jobs:
       image-tag: ghcr.io/gunet/wallet-enterprise:base
       docker-push: true
       dockerfile-path: ./base.Dockerfile
-			
-
