@@ -15,6 +15,7 @@ jobs:
       packages: read  # To read NPM registry
 
     uses: gunet/wallet-ecosystem/.github/workflows/docker-build-push.yml@dc-workflow
+    secrets: inherit
     with:
       image-tag: ghcr.io/gunet/wallet-enterprise:latest
       docker-push: false
