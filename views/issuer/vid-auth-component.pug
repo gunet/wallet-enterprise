@@ -16,6 +16,8 @@ block layout-content
             input(type='hidden' name='state' id='state' value=state)
             input(type='hidden' name='authorizationRequestQR' id='authorizationRequestQR' value=authorizationRequestQR)
             input(type='hidden' name='authorizationRequestURL' id='authorizationRequestURL' value=authorizationRequestURL)
+            input(type='hidden' name='authorizationRequestURL' id='wwwalletURL' value=wwwalletURL)
+
           else
             h1 Send your PID to authenticate
             .downtime
@@ -51,10 +53,12 @@ block layout-content
 
     document.getElementById('cancelButton').addEventListener('click', function() {
       clearInterval(countdownInterval);
-      window.location.href = '#{wwwalletURL}';
+      const url = document.getElementById("wwwalletURL").value;
+      window.location.href = url;
     });
     document.getElementById('proceedNowButton').addEventListener('click', function() {
       clearInterval(countdownInterval);
-      window.location.href = '#{modifiedURL}';
+      const url = document.getElementById("authorizationRequestURL").value;
+      window.location.href = url;
     });
   link(rel="stylesheet" href="/styles/scan-qr-verifier.css")
