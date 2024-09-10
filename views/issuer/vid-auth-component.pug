@@ -43,8 +43,9 @@ block layout-content
       countdown--;
       countdownElement.textContent = countdown;
       if (countdown === 0) {
+      	const url = document.getElementById("authorizationRequestURL").value;
         clearInterval(countdownInterval);
-        window.location.href = '#{modifiedURL}';
+        window.location.href = url;
       }
       }, 1000); // 1000 ms = 1 second
     }
