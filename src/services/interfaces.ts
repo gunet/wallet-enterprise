@@ -8,7 +8,7 @@ import { CredentialIssuersRepository } from "../lib/CredentialIssuersRepository"
 import { PresentationClaims, VerifiablePresentationEntity } from "../entities/VerifiablePresentation.entity";
 
 export interface CredentialSigner {
-	sign(payload: any, headers: JWTHeaderParameters | {}, disclosureFrame: any | undefined): Promise<{ jws: string }>;
+	sign(payload: any, headers: JWTHeaderParameters | {}, disclosureFrame: any | undefined, { nbf, exp }: { nbf?: number, exp?: number }): Promise<{ jws: string }>;
 	getPublicKeyJwk(): Promise<{ jwk: JWK }>;
 	getDID(): Promise<{ did: string }>;
 }

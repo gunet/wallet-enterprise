@@ -27,6 +27,7 @@ declare module 'express-session' {
 			},
 			vidAuthenticationComponent?: {
 				personalIdentifier?: string;
+				familyName?: string;
 			},
 			localAuthenticationComponent?: {
 				username?: string;

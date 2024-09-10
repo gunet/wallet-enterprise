@@ -128,6 +128,12 @@ export class AuthorizationServerState {
 	@Column({ name: "vid_data", type: "varchar", nullable: true })
 	personalIdentifier?: string;
 
+	/**
+	 * extracted from the vid
+	 */
+	@Column({ name: "vid_data_family_name", type: "varchar", nullable: true })
+	familyName?: string;
+
 	@Column({ name: "authentication_method", type: "enum", enum: UserAuthenticationMethod, nullable: true })
 	authenticationMethod?: UserAuthenticationMethod;
 

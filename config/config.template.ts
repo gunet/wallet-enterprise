@@ -10,5 +10,11 @@ export = {
 		password: "DB_PASSWORD",
 		dbname: "DB_NAME"
 	},
-	wwwalletURL: "WWWALLET_URL"
+	wwwalletURL: "WWWALLET_URL",
+	crl: {
+		url: "CRL_URL",
+		credentials: {
+			basicToken: ""
+		}
+	}
 }

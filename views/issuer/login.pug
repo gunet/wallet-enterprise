@@ -11,9 +11,9 @@ block layout-content
 						input#csrf-token(type="hidden" name="csrf-token" value="")
 
 						.input-wrap.item
-							input.input-field#username(type='text' name='username' value="john.doe" placeholder='Username')
+							input.input-field#username(type='text' name='username' value="johansson" placeholder='Username')
 						.input-wrap.item
-							input.input-field#password(type='password' name='password' value="john.doe" placeholder='Password')
+							input.input-field#password(type='password' name='password' value="johansson" placeholder='Password')
 
 						p.invalid-feedback#invalid-username #{locale.login.error.emptyUsername}
 						p.invalid-feedback#invalid-password #{locale.login.error.emptyPassword}
@@ -36,9 +36,8 @@ block layout-content
 								.select-container(style="flex-grow: 1;")
 									select#credential-list(style="width: 100%")
 										option(value="") Select credentials
-										option(value='{"username": "john.doe", "password": "john.doe"}') John Doe
-										option(value='{"username": "dicaprio", "password": "titanic21"}') Leonardo DiCaprio
-										option(value='{"username": "jamiefox", "password": "raycharles44"}') Jamie Fox
+										option(value='{"username": "johansson", "password": "johansson"}') Scarlett Johansson
+										option(value='{"username": "kidman", "password": "kidman"}') Nicole Kidman
 								button.Btn.Small#use-credential(disabled style="flex-shrink: 0;")
 									span Login
 
