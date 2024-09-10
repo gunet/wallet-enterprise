@@ -14,6 +14,7 @@ COPY --from=builder /home/node/app/package.json .
 COPY --from=builder /home/node/app/dist ./dist
 COPY --from=builder /home/node/app/public ./public
 COPY --from=builder /home/node/app/views ./views
+COPY --from=builder /home/node/app/dataset-reader-v1.0.0.tgz .
 
 
 RUN --mount=type=secret,id=npmrc,required=true,target=./.npmrc,uid=1000 \
