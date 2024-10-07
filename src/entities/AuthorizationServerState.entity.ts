@@ -110,11 +110,6 @@ export class AuthorizationServerState {
 	@Column({ name: "ssn", type: "varchar", nullable: true })
 	ssn?: string;
 
-	@Column({ name: "firstName", type: "varchar", nullable: true })
-	firstName?: string;
-
-	@Column({ name: "lastName", type: "varchar", nullable: true })
-	lastName?: string;
 
 	/**
 	 * this state random string will be used in order to expect a vid on a direct_post endpoint
@@ -131,12 +126,17 @@ export class AuthorizationServerState {
 	/**
 	 * extracted from the vid
 	 */
-	@Column({ name: "vid_data_family_name", type: "varchar", nullable: true })
-	familyName?: string;
+	@Column({ name: "family_name", type: "varchar", nullable: true })
+	family_name?: string;
+
+	@Column({ name: "given_name", type: "varchar", nullable: true })
+	given_name?: string;
+
+	@Column({ name: "birth_date", type: "varchar", nullable: true })
+	birth_date?: string;
 
 	@Column({ name: "authentication_method", type: "enum", enum: UserAuthenticationMethod, nullable: true })
 	authenticationMethod?: UserAuthenticationMethod;
-
 
 
 	// @Column({ name: "ediplomas_response", type: 'blob', nullable: true })
